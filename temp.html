@@ -1,0 +1,73 @@
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Medical Report</title>
+    <style>
+      /* Add some basic styles to the report */
+      body {
+        font-family: Arial, sans-serif;
+        font-size: 16px;
+      }
+      h1 {
+        font-size: 24px;
+      }
+      table {
+        border-collapse: collapse;
+        width: 100%;
+      }
+      th, td {
+        text-align: left;
+        padding: 8px;
+        border: 1px solid #ddd;
+      }
+      th {
+        background-color: #f2f2f2;
+      }
+      /* Hide the download button by default */
+      #download-btn {
+        display: none;
+      }
+    </style>
+  </head>
+  <body>
+    <center><h1>Medical Report</h1></center>
+    <p>Patient Name: {{ student }}</p>
+    <p>Date:{{ date }} </p>
+    <table>
+      <thead>
+        <tr>
+          <th>Test Name</th>
+          <th>Result</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Diagnosis</td>
+          <td>{{ prii }}</td>
+        </tr>
+        <tr>
+          <td>Severity</td>
+          <td>{{ course }}</td>
+        </tr>
+        
+      </tbody>
+    </table>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.5.3/jspdf.min.js"></script>
+    <script>
+      function generatePDF() {
+        // Create a new jsPDF instance
+        const doc = new jsPDF();
+        // Get the HTML content of the report section
+        const report = document.getElementById('report').innerHTML;
+        // Add the HTML content to the PDF document
+        doc.fromHTML(report, 15, 15);
+        // Save the PDF document as a file
+        doc.save('medical_report.pdf');
+        // Show the download button
+        
+      }
+    </script>
+  </body>
+</html>
