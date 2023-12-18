@@ -45,7 +45,6 @@ keyring==23.8.2
 MarkupSafe==2.1.1
 matplotlib-inline==0.1.6
 packaging==21.3
-pandas==1.4.3
 parso==0.8.3
 pickleshare==0.7.5
 Pillow==9.2.0
