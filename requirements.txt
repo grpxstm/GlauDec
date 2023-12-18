@@ -50,7 +50,7 @@ pickleshare==0.7.5
 pkginfo==1.8.3
 platformdirs==2.5.1
 prompt-toolkit==3.0.30
-protobuf==3.20.1
+protobuf>=3.20.3,<5.0.0dev
 psutil==5.9.1
 pure-eval==0.2.2
 pyarrow==9.0.0
