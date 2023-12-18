@@ -113,7 +113,6 @@ if LOGGED_IN == True:
 
         if submit:
                  html = template.render(
-                 student=username,
                  course=course,
                  prii=prii,
                  #description=description,
